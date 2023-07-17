@@ -1,0 +1,22 @@
+{
+    "sourceFile": "style.css",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1689623463784,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1689623491887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,6 +20,6 @@\n body {\n   background-image: url=\"assets/APP.mp4\";\n   background-repeat: no-repeat;\n   background-size: cover;\n-  align: center;\n+  align-items: center;\n }\n"
+                }
+            ],
+            "date": 1689623463784,
+            "name": "Commit-0",
+            "content": "table {\n    border-collapse: collapse;\n    width: 100%;\n  }\n  \n  th, td {\n    padding: 8px;\n    text-align: left;\n    border-bottom: 1px solid #ddd;\n  }\n  \n  th {\n    background-color: #f2f2f2;\n  }\n  \n  .hidden {\n    display: none;\n  }\n  \nbody {\n  background-image: url=\"assets/APP.mp4\";\n  background-repeat: no-repeat;\n  background-size: cover;\n  align: center;\n}\n"
+        }
+    ]
+}
