@@ -126,28 +126,23 @@ function renderPlanet(planet) {
 const planetSection = document.querySelector(".planet-section");
 planetSection.innerHTML = '';
 const planetContainer  = document.createElement("div");
-planetContainer.classList.add("planet-container");
+planetConstainer.classList.add("planet-container");
 const planetElement = document.createElement("div");
 const planetName = document.createElement("h2");
 planetName.classList.add("planetName");
 planetName.innerText = planet.name;
 planetElement.appendChild(planetName);
-planetContainer.appendChild(planetElement);
-planetSection.appendChild(planetContainer);
 
 const planetInfo = document.createElement("p");
 planetInfo.classList.add("planetInfo");
 planetInfo.innerText = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.synopsis || "No info collected";
 planetElement.appendChild(planetInfo);
-planetContainer.appendChild(planetElement);
-planetSection.appendChild(planetContainer);
 
 const planetImage = document.createElement("img");
 planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || "assets/placeholder.jpg";
 planetContainer.appendChild(planetImage);
-planetContainer.appendChild(planetElement);
-planetSection.appendChild(planetContainer);
-planetElement.append(planetImage);
+
+planetSection.appendChild(planetElement);
 }
 
 function showError() {

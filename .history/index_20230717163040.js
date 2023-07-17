@@ -126,7 +126,7 @@ function renderPlanet(planet) {
 const planetSection = document.querySelector(".planet-section");
 planetSection.innerHTML = '';
 const planetContainer  = document.createElement("div");
-planetContainer.classList.add("planet-container");
+planetConstainer.classList.add("planet-container");
 const planetElement = document.createElement("div");
 const planetName = document.createElement("h2");
 planetName.classList.add("planetName");

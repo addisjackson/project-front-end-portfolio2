@@ -8,7 +8,7 @@ body {
 
 h1 {
   text-align: center;
-  position: center;
+  position: relative;
   z-index: 1;
   color: #fff; 
 }
@@ -21,7 +21,6 @@ form {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  justify-content: center;
 }
 
 label {
@@ -35,7 +34,6 @@ label {
 
 #searchPlanet {
   text-align: center;
-  align-items: center;
 }
 
 button {
@@ -60,14 +58,7 @@ button {
 }
 
 .planet-section {
-  align-content: center;
   margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  text-align: center;
 }
 
 .planet-container {
