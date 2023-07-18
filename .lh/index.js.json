@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 14,
+            "activePatchIndex": 20,
             "patches": [
                 {
                     "date": 1689615754545,
@@ -64,6 +64,30 @@
                 {
                     "date": 1689625954330,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -125,9 +125,9 @@\n // Clear previous planet elements\n const planetSection = document.querySelector(\".planet-section\");\n planetSection.innerHTML = '';\n const planetContainer  = document.createElement(\"div\");\n-planetConstainer.classList.add(\"planet-container\");\n+planetContainer.classList.add(\"planet-container\");\n const planetElement = document.createElement(\"div\");\n const planetName = document.createElement(\"h2\");\n planetName.classList.add(\"planetName\");\n planetName.innerText = planet.name;\n"
+                },
+                {
+                    "date": 1689638934196,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -147,8 +147,10 @@\n planetContainer.appendChild(planetImage);\n planetContainer.appendChild(planetElement);\n planetSection.appendChild(planetContainer);\n planetElement.append(planetImage);\n+\n+\n }\n \n function showError() {\n // Clear previous error message and planet elements\n"
+                },
+                {
+                    "date": 1689639844577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -148,11 +148,16 @@\n planetContainer.appendChild(planetElement);\n planetSection.appendChild(planetContainer);\n planetElement.append(planetImage);\n \n+showHiddenButton();\n \n }\n-\n+function showHiddenButton () {\n+  let hiddenButton = document.getElementById(\"selectButton\");\n+  hiddenButton.style.display = \"block\";\n+  hiddenButton.innerHTML = `${Select ${planetName}}`;\n+}\n function showError() {\n // Clear previous error message and planet elements\n planetSection.innerHTML = '';\n \n"
+                },
+                {
+                    "date": 1689639945662,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -154,9 +154,9 @@\n }\n function showHiddenButton () {\n   let hiddenButton = document.getElementById(\"selectButton\");\n   hiddenButton.style.display = \"block\";\n-  hiddenButton.innerHTML = `${Select ${planetName}}`;\n+  hiddenButton.innerHTML = `Select ${planetName}`;\n }\n function showError() {\n // Clear previous error message and planet elements\n planetSection.innerHTML = '';\n"
+                },
+                {
+                    "date": 1689643937657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,55 +117,4 @@\n     planetError.appendChild(errorText);\n     planetSection.appendChild(planetError);\n     \n }\n-\n-\n-\n-function renderPlanet(planet) {\n-// Clear previous planet elements\n-const planetSection = document.querySelector(\".planet-section\");\n-planetSection.innerHTML = '';\n-const planetContainer  = document.createElement(\"div\");\n-planetContainer.classList.add(\"planet-container\");\n-const planetElement = document.createElement(\"div\");\n-const planetName = document.createElement(\"h2\");\n-planetName.classList.add(\"planetName\");\n-planetName.innerText = planet.name;\n-planetElement.appendChild(planetName);\n-planetContainer.appendChild(planetElement);\n-planetSection.appendChild(planetContainer);\n-\n-const planetInfo = document.createElement(\"p\");\n-planetInfo.classList.add(\"planetInfo\");\n-planetInfo.innerText = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.synopsis || \"No info collected\";\n-planetElement.appendChild(planetInfo);\n-planetContainer.appendChild(planetElement);\n-planetSection.appendChild(planetContainer);\n-\n-const planetImage = document.createElement(\"img\");\n-planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || \"assets/placeholder.jpg\";\n-planetContainer.appendChild(planetImage);\n-planetContainer.appendChild(planetElement);\n-planetSection.appendChild(planetContainer);\n-planetElement.append(planetImage);\n-\n-showHiddenButton();\n-\n-}\n-function showHiddenButton () {\n-  let hiddenButton = document.getElementById(\"selectButton\");\n-  hiddenButton.style.display = \"block\";\n-  hiddenButton.innerHTML = `Select ${planetName}`;\n-}\n-function showError() {\n-// Clear previous error message and planet elements\n-planetSection.innerHTML = '';\n-\n-const planetError = document.createElement(\"div\");\n-planetError.classList.add(\"planetError\");\n-const errorText = document.createElement(\"p\");\n-errorText.classList.add(\"errorText\");\n-errorText.innerText = \"No flights found to this planet. Please check back in the future as we are always expanding our service area.\";\n-planetError.appendChild(errorText);\n-planetSection.appendChild(planetError);\n-}\n"
+                },
+                {
+                    "date": 1689644463727,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -117,4 +117,43 @@\n     planetError.appendChild(errorText);\n     planetSection.appendChild(planetError);\n     \n }\n+\n+\n+\n+function renderPlanet(planet) {\n+// Clear previous planet elements\n+const planetSection = document.querySelector(\".planet-section\");\n+planetSection.innerHTML = '';\n+const planetContainer  = document.createElement(\"div\");\n+planetContainer.classList.add(\"planet-container\");\n+const planetElement = document.createElement(\"div\");\n+const planetName = document.createElement(\"h2\");\n+planetName.classList.add(\"planetName\");\n+planetName.innerText = planet.name;\n+planetElement.appendChild(planetName);\n+planetContainer.appendChild(planetElement);\n+planetSection.appendChild(planetContainer);\n+\n+const planetInfo = document.createElement(\"p\");\n+planetInfo.classList.add(\"planetInfo\");\n+planetInfo.innerText = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.synopsis || \"No info collected\";\n+planetElement.appendChild(planetInfo);\n+planetContainer.appendChild(planetElement);\n+planetSection.appendChild(planetContainer);\n+\n+const planetImage = document.createElement(\"img\");\n+planetImage.src = searchedPlanet.find(p => p.name.toLowerCase() === planet.name.toLowerCase())?.image || \"assets/placeholder.jpg\";\n+planetContainer.appendChild(planetImage);\n+planetContainer.appendChild(planetElement);\n+planetSection.appendChild(planetContainer);\n+planetElement.append(planetImage);\n+\n+showHiddenButton();\n+\n+}\n+function showHiddenButton () {\n+  let hiddenButton = document.getElementById(\"selectButton\");\n+  hiddenButton.style.display = \"block\";\n+  hiddenButton.innerHTML = `Select ${planet.name}`;\n+}\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1689645564137,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -152,8 +152,10 @@\n showHiddenButton();\n \n }\n function showHiddenButton () {\n-  let hiddenButton = document.getElementById(\"selectButton\");\n+  let hiddenButton = document.createElement(\"button\");\n+  hiddenButton.classList.add(\"hiddenButton\");\n+  hiddenButton.textContent = \"`Select ${planet.name}`\";\n   hiddenButton.style.display = \"block\";\n   hiddenButton.innerHTML = `Select ${planet.name}`;\n }\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1689615754545,

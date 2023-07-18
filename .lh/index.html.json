@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 4,
+            "activePatchIndex": 8,
             "patches": [
                 {
                     "date": 1689614985285,
@@ -24,6 +24,22 @@
                 {
                     "date": 1689627017002,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,13 @@\n   <link rel=\"stylesheet\" href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n+  <div class=\"background-video\">\n+    <video autoplay loop muted>\n+      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n+    </video>\n+  </div>\n   <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n   <form id=\"searchForm\">\n     <h2 id=\"searchPlanet\">Search For Flights To Your Desired Planet Here:</h2>\n     <div class=\"name\">\n"
+                },
+                {
+                    "date": 1689638103740,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,13 +8,8 @@\n   <link rel=\"stylesheet\" href=\"style.css\">\n   <script defer src=\"index.js\"></script>\n </head>\n <body>\n-  <div class=\"background-video\">\n-    <video autoplay loop muted>\n-      <source src=\"assets/addis_app.mp4\" type=\"video/mp4\">\n-    </video>\n-  </div>\n   <h1>Addis' Galactic Flights to the Stars (Wars)</h1>\n   <form id=\"searchForm\">\n     <h2 id=\"searchPlanet\">Search For Flights To Your Desired Planet Here:</h2>\n     <div class=\"name\">\n"
+                },
+                {
+                    "date": 1689638934133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,8 +18,9 @@\n     </div>\n     <div class=\"buttons\">\n       <button type=\"submit\" id=\"searchButton\">Search</button>\n       <button type=\"reset\" id=\"resetButton\">Reset</button>\n+      <button type=\"select\" id=\"selectButton\" class=\"hidden-button\"></button>\n     </div>\n   </form>\n   <section class=\"planet-section\">\n   </section>\n"
+                },
+                {
+                    "date": 1689639213247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     </div>\n     <div class=\"buttons\">\n       <button type=\"submit\" id=\"searchButton\">Search</button>\n       <button type=\"reset\" id=\"resetButton\">Reset</button>\n-      <button type=\"select\" id=\"selectButton\" class=\"hidden-button\"></button>\n+      <button type=\"select\" id=\"selectButton\" class=\"hidden-button\">Select</button>\n     </div>\n   </form>\n   <section class=\"planet-section\">\n   </section>\n"
+                },
+                {
+                    "date": 1689645404516,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -18,9 +18,9 @@\n     </div>\n     <div class=\"buttons\">\n       <button type=\"submit\" id=\"searchButton\">Search</button>\n       <button type=\"reset\" id=\"resetButton\">Reset</button>\n-      <button type=\"select\" id=\"selectButton\" class=\"hidden-button\">Select</button>\n+      \n     </div>\n   </form>\n   <section class=\"planet-section\">\n   </section>\n"
                 }
             ],
             "date": 1689614985285,

@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 17,
+            "activePatchIndex": 23,
             "patches": [
                 {
                     "date": 1689623463784,
@@ -76,6 +76,30 @@
                 {
                     "date": 1689629221203,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,122 @@\n+/* style.css */\n+\n+body {\n+  font-family: Arial, sans-serif;\n+  margin: 0;\n+  padding: 20px;\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: center;\n+  z-index: 1;\n+  color: #fff; \n+}\n+\n+form {\n+  margin-bottom: 20px;\n+}\n+\n+.name {\n+  display: flex;\n+  align-items: center;\n+  margin-bottom: 10px;\n+  justify-content: center;\n+}\n+\n+label {\n+  margin-right: 10px;\n+}\n+\n+.buttons {\n+  display: flex;\n+  justify-content: center;\n+}\n+\n+#searchPlanet {\n+  text-align: center;\n+  align-items: center;\n+}\n+\n+button {\n+  margin: 0 5px;\n+  padding: 8px 16px;\n+  border: none;\n+  background-color: #333;\n+  color: #fff;\n+  cursor: pointer;\n+}\n+.background-video {\n+  background-repeat: no-repeat;\n+  background-size: cover;\n+  background-position: center;\n+  position: fixed;\n+  top: 0;\n+  left: 0;\n+  width: 100%;\n+  height: 100%;\n+  z-index: -1;\n+  overflow: hidden;\n+}\n+\n+.planet-section {\n+  align-content: center;\n+  margin-top: 20px;\n+  display: flex;\n+  flex-direction: column;\n+  align-items: center;\n+  justify-content: center;\n+  height: 100vh;\n+  text-align: center;\n+}\n+\n+.planet-container {\n+  display: flex;\n+  align-items: flex-start;\n+}\n+\n+.planet-image {\n+  flex: 1;\n+  margin-right: 20px;\n+}\n+\n+.planet-info {\n+  flex: 2;\n+}\n+\n+.planetName {\n+  font-size: 24px;\n+  font-weight: bold;\n+}\n+\n+.planetInfo {\n+  margin-top: 10px;\n+}\n+\n+img {\n+  max-width: 100%;\n+  height: auto;\n+}\n+\n+.planetError {\n+  color: red;\n+  text-align: center;\n+}\n+\n+.errorText {\n+  font-style: italic;\n+}\n+\n+video {\n+  width: 100%;\n+  height: 100%;\n+  object-fit: cover;\n+  opacity: 0.7; /* Adjust the opacity as desired */\n+}\n+\n+h1 {\n+  text-align: center;\n+  position: relative;\n+  z-index: 1;\n+  color: #fff; /* Adjust the text color to be visible against the video */\n+}\n"
+                },
+                {
+                    "date": 1689638075136,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,146 +106,4 @@\n .errorText {\n   font-style: italic;\n }\n \n-video {\n-  width: 100%;\n-  height: 100%;\n-  object-fit: cover;\n-  opacity: 0.7; /* Adjust the opacity as desired */\n-}\n-\n-h1 {\n-  text-align: center;\n-  position: relative;\n-  z-index: 1;\n-  color: #fff; /* Adjust the text color to be visible against the video */\n-}\n-/* style.css */\n-\n-body {\n-  font-family: Arial, sans-serif;\n-  margin: 0;\n-  padding: 20px;\n-}\n-\n-h1 {\n-  text-align: center;\n-  position: center;\n-  z-index: 1;\n-  color: #fff; \n-}\n-\n-form {\n-  margin-bottom: 20px;\n-}\n-\n-.name {\n-  display: flex;\n-  align-items: center;\n-  margin-bottom: 10px;\n-}\n-\n-label {\n-  margin-right: 10px;\n-}\n-\n-.buttons {\n-  display: flex;\n-  justify-content: center;\n-}\n-\n-#searchPlanet {\n-  text-align: center;\n-  align-items: center;\n-}\n-\n-button {\n-  margin: 0 5px;\n-  padding: 8px 16px;\n-  border: none;\n-  background-color: #333;\n-  color: #fff;\n-  cursor: pointer;\n-}\n-.background-video {\n-  background-repeat: no-repeat;\n-  background-size: cover;\n-  background-position: center;\n-  position: fixed;\n-  top: 0;\n-  left: 0;\n-  width: 100%;\n-  height: 100%;\n-  z-index: -1;\n-  overflow: hidden;\n-}\n-\n-.planet-section {\n-  align-content: center;\n-  margin-top: 20px;\n-  display: flex;\n-  flex-direction: column;\n-  align-items: center;\n-  justify-content: center;\n-  height: 100vh;\n-  text-align: center;\n-}\n-\n-.name {\n-  display: flex;\n-  align-items: center;\n-  justify-content: center;\n-  margin-bottom: 10px;\n-}\n-\n-\n-.planet-container {\n-  display: flex;\n-  align-items: flex-start;\n-}\n-\n-.planet-image {\n-  flex: 1;\n-  margin-right: 20px;\n-}\n-\n-.planet-info {\n-  flex: 2;\n-}\n-\n-.planetName {\n-  font-size: 24px;\n-  font-weight: bold;\n-}\n-\n-.planetInfo {\n-  margin-top: 10px;\n-}\n-\n-img {\n-  max-width: 100%;\n-  height: auto;\n-}\n-\n-.planetError {\n-  color: red;\n-  text-align: center;\n-}\n-\n-.errorText {\n-  font-style: italic;\n-}\n-\n-video {\n-  width: 100%;\n-  height: 100%;\n-  object-fit: cover;\n-  opacity: 0.7; /* Adjust the opacity as desired */\n-}\n-\n-h1 {\n-  text-align: center;\n-  position: relative;\n-  z-index: 1;\n-  color: #fff; /* Adjust the text color to be visible against the video */\n-}\n"
+                },
+                {
+                    "date": 1689638275947,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n body {\n   font-family: Arial, sans-serif;\n   margin: 0;\n   padding: 20px;\n+  background-image: \"/assets/hostess.avif\"\n }\n \n h1 {\n   text-align: center;\n@@ -106,4 +107,5 @@\n .errorText {\n   font-style: italic;\n }\n \n+\n"
+                },
+                {
+                    "date": 1689638524469,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n   color: #fff; \n }\n \n form {\n-  margin-bottom: 20px;\n+  margin-bottom: 50px;\n }\n \n .name {\n   display: flex;\n"
+                },
+                {
+                    "date": 1689639238233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,5 +107,8 @@\n .errorText {\n   font-style: italic;\n }\n \n+.hidden-button {\n+  display: none;\n+}\n \n"
+                },
+                {
+                    "date": 1689643834779,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,10 @@\n   border: none;\n   background-color: #333;\n   color: #fff;\n   cursor: pointer;\n+border-radius: 5px;\n+display: inline-flexbox,\n }\n .background-video {\n   background-repeat: no-repeat;\n   background-size: cover;\n"
+                },
+                {
+                    "date": 1689644524459,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -46,10 +46,11 @@\n   background-color: #333;\n   color: #fff;\n   cursor: pointer;\n border-radius: 5px;\n-display: inline-flexbox,\n+display: inline-flexbox;\n }\n+\n .background-video {\n   background-repeat: no-repeat;\n   background-size: cover;\n   background-position: center;\n"
                 }
             ],
             "date": 1689623463784,
